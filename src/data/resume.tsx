@@ -82,6 +82,7 @@ export const DATA = {
       title: "Frontend Developer",
       logoUrl: "/cacta.png",
       start: "Feb 2024",
+      end: "",
       description:
         "Spearheaded the end-to-end creation of the website for Cacta Sustainability Solutions. Engineered a high-performance, optimized site by leveraging Astro, React.js, and Tailwind CSS. Solved unique technical challenges, including the implementation of an AI-powered video editing feature. Currently partnering with the team to evolve the platform, enhancing functionality to revolutionize sustainability on a global scale.",
     },
