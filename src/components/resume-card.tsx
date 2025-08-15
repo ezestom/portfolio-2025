@@ -44,13 +44,13 @@ export const ResumeCard = ({
       className="block cursor-pointer"
       onClick={handleClick}
     >
-      <Card className="flex">
+      <Card className="flex bg-transparent">
         <div className="flex-none">
-          <Avatar className="border size-16 m-auto">
+          <Avatar className="border size-12 m-auto bg-black">
             <AvatarImage
               src={logoUrl}
               alt={altText}
-              className="object-contain p-1 bg-black/10"
+              className="object-contain p-1 rounded-xl overflow-hidden"
             />
             <AvatarFallback>{altText[0]}</AvatarFallback>
           </Avatar>
