@@ -81,7 +81,7 @@ export default function RootLayout({
                   "/e_logo_op.png",
               }} >
                 <Link href="/" aria-label={DATA.name}>
-                  <Button className="bg-transparent border-none p-0 active:bg-inherit hover:bg-inherit focus:bg-inherit hover:scale-105 transition-all active:scale-95">
+                  <Button className="bg-transparent border-none p-0 active:bg-inherit hover:bg-inherit focus:bg-inherit hover:scale-105 transition-all active:scale-95 shadow-none">
                     <Image
                       src="/e_logo_op.png"
                       alt="Logo"
