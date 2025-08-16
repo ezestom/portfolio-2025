@@ -15,9 +15,9 @@ const BLUR_FADE_DELAY = 0.04;
 export default function Page() {
 
   return (
-    <main className="flex flex-col min-h-[100dvh] space-y-10">
-      <div className="fixed top-0 right-0 h-full w-full"><div className="absolute opacity-25 bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]"></div></div>
-      <section id="hero">
+    <main className="flex flex-col min-h-[100dvh]">
+      <div className="fixed top-0 right-0 h-full w-full"><div className="absolute opacity-25 dark:opacity-75 bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]"></div></div>
+      <section className="py-2" id="hero">
         <div className="mx-auto w-full max-w-2xl space-y-8">
           <div className="gap-2 flex justify-between">
             <div className="flex-col flex flex-1 space-y-1.5">
@@ -42,7 +42,7 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <section id="about">
+      <section className="py-2" id="about">
         <BlurFade delay={BLUR_FADE_DELAY * 3}>
           <h2 className="text-xl font-bold">About</h2>
         </BlurFade>
@@ -52,7 +52,7 @@ export default function Page() {
           </Markdown>
         </BlurFade>
       </section>
-      <section id="work">
+      <section className="py-2" id="work">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 5}>
             <h2 className="text-xl font-bold">Work Experience</h2>
@@ -77,7 +77,7 @@ export default function Page() {
           ))}
         </div>
       </section>
-      <section id="education">
+      <section className="py-2" id="education">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 7}>
             <h2 className="text-xl font-bold">Education</h2>
@@ -100,7 +100,7 @@ export default function Page() {
           ))}
         </div>
       </section>
-      <section id="skills">
+      <section className="py-2" id="skills">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 9}>
             <h2 className="text-xl font-bold">Skills</h2>
@@ -114,7 +114,7 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <section id="projects">
+      <section className="py-2" id="projects">
         <div className="space-y-12 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 11}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
@@ -155,7 +155,7 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <section id="hackathons">
+      <section className="py-2" id="hackathons">
         <div className="space-y-12 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 13}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
@@ -204,7 +204,7 @@ export default function Page() {
           </BlurFade>
         </div>
       </section>
-      <section id="contact">
+      <section className="py-2" id="contact">
         <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 16}>
             <div className="space-y-3">
@@ -215,15 +215,19 @@ export default function Page() {
                 Get in touch
               </h2>
               <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Want to chat? Just shoot me a dm{" "}
-                <Link
-                  href={DATA.contact.social.X.url}
+                Want to text me? Write me a <Link
+                  href={`mailto:${DATA.contact.email}`}
                   className="text-blue-500 hover:underline"
                 >
-                  with a direct question on twitter
+                  message
+                </Link>{" "} or {" "}
+                <Link
+                  href={`mailto:${DATA.contact.email}`}
+                  className="text-blue-500 hover:underline"
+                >
+                  send me an email,
                 </Link>{" "}
-                and I&apos;ll respond whenever I can. I will ignore all
-                soliciting.
+                and I&apos;ll respond you. We will be in touch soon!
               </p>
             </div>
           </BlurFade>
