@@ -79,6 +79,9 @@ export default function RootLayout({
               <CoolMode options={{
                 particle:
                   "/e_logo_op.png",
+                speedUp: 10,
+                size: 40,
+                speedHorz: 0
               }} >
                 <Link href="/" aria-label={DATA.name}>
                   <Button className="bg-transparent border-none p-0 active:bg-inherit hover:bg-inherit focus:bg-inherit hover:scale-105 transition-all active:scale-95 shadow-none">

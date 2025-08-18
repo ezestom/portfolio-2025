@@ -31,7 +31,7 @@ export const DATA = {
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
-    { href: "https://ezestom-resume.vercel.app/", icon: NotebookIcon, label: "Resume" },
+    { href: "/resume", icon: NotebookIcon, label: "Resume" },
   ],
   contact: {
     email: "ezequielstom@gmail.com",
