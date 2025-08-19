@@ -2,6 +2,8 @@ import { HackathonCard } from "@/components/hackathon-card";
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
 import HeroVideoDialog from "@/components/magicui/hero-video-dialog";
+import { Highlighter } from "@/components/magicui/highlighter";
+import PopoverFormDemo from "@/components/popover-form-demo";
 import { ProjectCard } from "@/components/project-card";
 import { ResumeCard } from "@/components/resume-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -27,11 +29,24 @@ export default function Page() {
                 yOffset={8}
                 text={`Hi, I'm ${DATA.name}`}
               />
-              <BlurFadeText
+              {/* <BlurFadeText
                 className="max-w-[600px] md:text-xl text-balance"
                 delay={BLUR_FADE_DELAY}
                 text={DATA.description}
-              />
+              /> */}
+              <BlurFade delay={BLUR_FADE_DELAY}>
+                <p className="">
+                  <Highlighter action="underline" color="#4285F4" animationDuration={1500}>
+                    Frontend Developer
+                  </Highlighter>{" "}
+                  with +3 years of experience in web development and modern technologies like{" "}
+                  <Highlighter action="highlight" color="#F4B400" animationDuration={1500}>
+                    {" "} Astro and Next.js.
+                  </Highlighter>
+                  {" "} Based in Buenos Aires, Argentina.
+                </p>
+              </BlurFade>
+
             </div>
             <BlurFade delay={BLUR_FADE_DELAY}>
               <Avatar className="size-32 border">
@@ -214,21 +229,25 @@ export default function Page() {
               <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
                 Get in touch
               </h2>
-              <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Want to text me? Write me a <Link
-                  href={`mailto:${DATA.contact.email}`}
-                  className="text-blue-500 hover:underline"
-                >
-                  message
-                </Link>{" "} or {" "}
-                <Link
-                  href={`mailto:${DATA.contact.email}`}
-                  className="text-blue-500 hover:underline"
-                >
-                  send me an email,
-                </Link>{" "}
-                and I&apos;ll respond you. We will be in touch soon!
-              </p>
+              <div className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed">
+                <p>Want to text me?</p>
+                <p className="mx-auto max-w-[600px] text-muted-foreground ...">
+                  Want to text me? Write me a
+                </p>
+                <div>
+                  <p className="flex items-center justify-center gap-1">
+                    <Link
+                      href={`mailto:${DATA.contact.email}`}
+                      className="text-blue-500 hover:underline"
+                    >
+                      email
+                    </Link>{" "}
+                    {" "} or an {" "}
+                    <PopoverFormDemo />
+                  </p>
+                  {" "} and I&apos;ll get back to you soon.
+                </div>
+              </div>
             </div>
           </BlurFade>
         </div>

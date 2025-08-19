@@ -146,7 +146,7 @@ export const DATA = {
   projects: [
     {
       title: "Cacta AI Assistant",
-      href: "https://app-bot.vercel.app/",
+      href: "https://cacta.eco",
       dates: "",
       active: true,
       description:
