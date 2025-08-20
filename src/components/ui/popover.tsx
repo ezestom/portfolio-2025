@@ -17,7 +17,7 @@ const TRANSITION = {
   type: "spring",
   bounce: 0.05,
   duration: 0.3,
-}
+} as const; // <-- Solo añade "as const" aquí
 
 function useClickOutside(
   ref: React.RefObject<HTMLElement>,
