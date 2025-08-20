@@ -36,11 +36,11 @@ export default function Page() {
               /> */}
               <BlurFade delay={BLUR_FADE_DELAY}>
                 <p className="">
-                  <Highlighter action="underline" color="#4285F4" animationDuration={1500}>
+                  <Highlighter action="underline" color="#4285F4" animationDuration={2000}>
                     Frontend Developer
                   </Highlighter>{" "}
                   with +3 years of experience in web development and modern technologies like{" "}
-                  <Highlighter action="highlight" color="#F4B400" animationDuration={1500}>
+                  <Highlighter action="highlight" color="#F4B400" animationDuration={2000}>
                     {" "} Astro and Next.js.
                   </Highlighter>
                   {" "} Based in Buenos Aires, Argentina.
@@ -235,7 +235,7 @@ export default function Page() {
                   Want to text me? Write me a
                 </p>
                 <div>
-                  <p className="flex items-center justify-center gap-1">
+                  <article className="flex items-center justify-center gap-1">
                     <Link
                       href={`mailto:${DATA.contact.email}`}
                       className="text-blue-500 hover:underline"
@@ -244,7 +244,7 @@ export default function Page() {
                     </Link>{" "}
                     {" "} or an {" "}
                     <PopoverFormDemo />
-                  </p>
+                  </article>
                   {" "} and I&apos;ll get back to you soon.
                 </div>
               </div>
