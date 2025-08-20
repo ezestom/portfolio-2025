@@ -87,13 +87,14 @@ export default function PopoverFormFeedbackExample() {
             showSuccess={formState === "success"}
             openChild={
                <form
+                  className="flex flex-col w-full"
                   onSubmit={(e) => {
                      e.preventDefault();
                      if (!feedback || !userEmail) return;
                      submit();
                   }}
                >
-                  <div className="relative flex flex-col">
+                  <div className="relative flex flex-col w-full">
                      <input
                         type="email"
                         name="user_email"
@@ -117,7 +118,7 @@ export default function PopoverFormFeedbackExample() {
                         <p className="p-3 pt-0 text-xs text-red-500">{errorMessage}</p>
                      )}
                   </div>
-                  <div className="relative flex h-12 items-center px-[10px]">
+                  <div className="relative flex h-12 items-center px-[10px] w-full">
                      <PopoverFormSeparator />
                      <div className="absolute left-0 top-0 -translate-x-[1.5px] -translate-y-1/2">
                         <PopoverFormCutOutLeftIcon />

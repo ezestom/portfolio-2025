@@ -79,7 +79,7 @@ export default function HeroVideoDialog({
   const selectedAnimation = animationVariants[animationStyle];
 
   return (
-    <div className={cn("flex items-center justify-center mx-auto", className)}>
+    <div className={cn("flex items-center justify-center mx-auto w-full", className)}>
       <button
         type="button"
         aria-label="Play video"
@@ -91,7 +91,7 @@ export default function HeroVideoDialog({
           alt={thumbnailAlt}
           width={1920}
           height={1080}
-          className="w-full rounded-md border shadow-lg transition-all duration-200 ease-out aspect-video object-contain min-h-[250px] p-8"
+          className="w-full rounded-md border shadow-lg transition-all duration-200 ease-out aspect-video object-contain h-full min-h-[350px] max-w-[624px] p-8"
         />
         <div className="absolute inset-0 flex scale-[0.9] items-center justify-center rounded-2xl transition-all duration-200 ease-out group-hover:scale-100">
           <div className="flex size-28 items-center justify-center rounded-full bg-primary/10 backdrop-blur-md">

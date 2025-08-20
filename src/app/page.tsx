@@ -1,4 +1,4 @@
-import { HackathonCard } from "@/components/hackathon-card";
+import { CardCarouselDemo } from "@/components/card-carousel-demo";
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
 import HeroVideoDialog from "@/components/magicui/hero-video-dialog";
@@ -140,7 +140,7 @@ export default function Page() {
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
                   Check out my latest work
                 </h2>
-                <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                <p className="text-muted-foreground">
                   I&apos;ve worked on a variety of projects, from simple
                   websites to complex web applications. Here are a few of my
                   favorites.
@@ -181,13 +181,13 @@ export default function Page() {
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
                   One frame at a time
                 </h2>
-                <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                <p className="text-muted-foreground">
                   With DaVinci Resolve as my main tool, I seek to improve with every project to create dynamics videos, engaging content that connects with my projects and clients.
                 </p>
               </div>
             </div>
           </BlurFade>
-          <BlurFade delay={BLUR_FADE_DELAY * 14} className="py-12">
+          <BlurFade delay={BLUR_FADE_DELAY * 14}>
             <HeroVideoDialog
               className="block"
               animationStyle="from-top"
@@ -199,7 +199,7 @@ export default function Page() {
 
           </BlurFade>
           <BlurFade delay={BLUR_FADE_DELAY * 14}>
-            <ul className="mb-4 ml-4 divide-y divide-dashed border-l">
+            {/* <ul className="mb-4 ml-4 divide-y divide-dashed border-l">
               {DATA.hackathons.map((project, id) => (
                 <BlurFade
                   key={project.title + project.dates}
@@ -215,12 +215,26 @@ export default function Page() {
                   />
                 </BlurFade>
               ))}
-            </ul>
+            </ul> */}
+            <div className="flex flex-col items-center justify-center space-y-4 text-center py-12">
+              <div className="space-y-2">
+                <div className="inline-block rounded-md bg-foreground text-background px-3 py-1 text-sm">
+                  Testimonials
+                </div>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                  Colleague Reviews
+                </h2>
+                <p className="text-muted-foreground">
+                  Some words from people I&apos;ve worked with.
+                </p>
+              </div>
+            </div>
+            <CardCarouselDemo />
           </BlurFade>
         </div>
       </section>
       <section className="py-2" id="contact">
-        <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full py-12">
+        <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full">
           <BlurFade delay={BLUR_FADE_DELAY * 16}>
             <div className="space-y-3">
               <div className="inline-block rounded-md bg-foreground text-background px-3 py-1 text-sm">
@@ -235,7 +249,7 @@ export default function Page() {
                   Want to text me? Write me a
                 </p>
                 <div>
-                  <article className="flex items-center justify-center gap-1">
+                  <article className="flex items-center justify-center gap-1 w-full">
                     <Link
                       href={`mailto:${DATA.contact.email}`}
                       className="text-blue-500 hover:underline"
