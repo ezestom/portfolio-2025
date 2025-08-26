@@ -1,5 +1,5 @@
 import { Icons } from "@/components/icons";
-import { HomeIcon, NotebookIcon } from "lucide-react";
+import { HomeIcon } from "lucide-react";
 
 export const DATA = {
   name: "Ezequiel Stom",
@@ -31,12 +31,19 @@ export const DATA = {
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
-    { href: "https://ezestom-resume.vercel.app/", icon: NotebookIcon, label: "Resume" },
+    // { href: "https://docs.google.com/document/d/1Y2ZbivVlhHna22UH8nwpOk96HhbQ_hNx20ON4v9H0DE/edit?usp=sharing", icon: NotebookIcon, label: "Resume" },
   ],
   contact: {
     email: "ezequielstom@gmail.com",
     tel: "+5491168641122",
     social: {
+      Resume: {
+        name: "Resume",
+        url: "https://docs.google.com/document/d/1uxbvnkPjh5ytzQFZHjF0q-PCZdM9wlfyGNcGrxOJt2k/edit?usp=sharing",
+        icon: Icons.NotebookIcon,
+
+        navbar: true,
+      },
       GitHub: {
         name: "GitHub",
         url: "https://github.com/ezestom",
